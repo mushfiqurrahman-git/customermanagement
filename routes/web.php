@@ -18,10 +18,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/demo',function(){
-    echo "Hello World ";
+Route::get('/demo/{name}/{id?}',function($name,$id=null){
+    $data = compact('name','id')
 });
 
-Route::post('/test',function(){
+Route::any('/test',function(){
     echo "Testing the route";
 });
+
