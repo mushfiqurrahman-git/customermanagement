@@ -13,17 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/{name?}',function($name = null){
+    $demo = "<h2>abc</h2>";
+    $data = compact('name','demo');
+    return view('home')->with($data);
 });
-
-
-Route::get('/demo/{name}/{id?}',function($name,$id=null){
-    $data = compact('name','id');
-    return view('demo')->with($data);
-});
-
-Route::any('/test',function(){
-    echo "Testing the route";
-});
-
