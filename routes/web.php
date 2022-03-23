@@ -19,7 +19,8 @@ Route::get('/', function () {
 
 
 Route::get('/demo/{name}/{id?}',function($name,$id=null){
-    $data = compact('name','id')
+    $data = compact('name','id');
+    print_r($data);
 });
 
 Route::any('/test',function(){
