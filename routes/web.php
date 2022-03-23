@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/demo/{name}/{id?}',function($name,$id=null){
     $data = compact('name','id');
-    print_r($data);
+    return view('demo')->with($data);
 });
 
 Route::any('/test',function(){
