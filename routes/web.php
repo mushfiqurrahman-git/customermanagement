@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\SingleActionController;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,4 @@ use App\Http\Controllers\SingleActionController;
 |
 */
 
-Route::get('/',[DemoController::class,'index']);
-Route::get('/about',[DemoController::class,'about']);
-Route::get('/courses',SingleActionController::class);
+Route::get('/register',[RegistrationController::class,'index']);
