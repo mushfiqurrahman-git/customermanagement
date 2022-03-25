@@ -13,6 +13,11 @@
   <body>
       <form action="{{url('/')}}/register" method="post">
         @csrf
+        <pre>
+          @php
+              print_r($errors->all());
+          @endphp
+        </pre>
       <div class="container">
           <h1 class="text-center">Registration</h1>
           <div class="form-group">
