@@ -11,7 +11,8 @@
     <title>Hello, world!</title>
   </head>
   <body>
-      <form action="" method="post">
+      <form action="{{url('/')}}/register" method="post">
+        @csrf
       <div class="container">
           <h1 class="text-center">Registration</h1>
           <div class="form-group">
