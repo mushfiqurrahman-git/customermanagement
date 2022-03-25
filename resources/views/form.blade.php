@@ -17,7 +17,7 @@
           <h1 class="text-center">Registration</h1>
           <div class="form-group">
               <label for="">Name</label>
-              <input type="text" name="name" id="" class="form-control" placeholder="" aria-description"helpId">
+              <input type="text" name="name" id="" class="form-control" value="{{old('name')}}" placeholder="" aria-description"helpId">
               <!-- <small id="helpId" class="text-muted">Help text</small> -->
               <span class="text-danger">
               @error('name')
@@ -26,7 +26,7 @@
               </span>
 </div><div class="form-group">
               <label for="">Email</label>
-              <input type="email" name="email" id="" class="form-control" placeholder="" aria-description"helpId">
+              <input type="email" name="email" id="" class="form-control" value="{{old('email')}}" placeholder="" aria-description"helpId">
               <!-- <small id="helpId" class="text-muted">Help text</small> -->
               <span class="text-danger">
               @error('email')
@@ -44,10 +44,10 @@
               </span>
 </div><div class="form-group">
               <label for="">Confirm Password</label>
-              <input type="password" name="confirm_password" id="" class="form-control" placeholder="" aria-description"helpId">
+              <input type="password" name="password_confirmation" id="" class="form-control" placeholder="" aria-description"helpId">
               <!-- <small id="helpId" class="text-muted">Help text</small> -->
               <span class="text-danger">
-              @error('confirm_password')
+              @error('password_confirmation')
                   {{$message}}
               @enderror
               </span>
