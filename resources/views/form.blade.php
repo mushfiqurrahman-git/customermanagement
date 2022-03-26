@@ -13,8 +13,11 @@
   <body>
       <form action="{{url('/')}}/register" method="post">
         @csrf
+        @php
+            $demo = 1;
+        @endphp
       <div class="container">
-        <x-input type="text" name="name" label="Please enter your name"/>
+        <x-input type="text" name="name" label="Please enter your name" :demo="$demo"/>
         <x-input type="email" name="email" label="Please enter your email"/>
         <x-input type="password" name="password" label="Please enter your password"/>
         <x-input type="password_confirmation" name="password_confirmation" label="Confirm  Password"/>

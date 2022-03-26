@@ -3,6 +3,7 @@
               <input type="{{$type}}" name="{{$name}}" id="" class="form-control" value="{{old('name')}}" placeholder="" aria-description"helpId">
               <!-- <small id="helpId" class="text-muted">Help text</small> -->
               <span class="text-danger">
+                    {{$demo}}
               <!-- @error('name')
                     {{$message}}
               @enderror -->
