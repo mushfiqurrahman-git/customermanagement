@@ -14,17 +14,11 @@
       <form action="{{url('/')}}/register" method="post">
         @csrf
       <div class="container">
-          <h1 class="text-center">Registration</h1>
-          <div class="form-group">
-              <label for="">Name</label>
-              <input type="text" name="name" id="" class="form-control" value="{{old('name')}}" placeholder="" aria-description"helpId">
-              <!-- <small id="helpId" class="text-muted">Help text</small> -->
-              <span class="text-danger">
-              @error('name')
-                    {{$message}}
-              @enderror
-              </span>
-</div>
+        <x-input type="text" name="name" label="Please enter your name"/>
+        <x-input type="email" name="email" label="Please enter your email"/>
+        <x-input type="password" name="password" label="Please enter your password"/>
+        <x-input type="password_confirmation" name="password_confirmation" label="Confirm  Password"/>
+          
 <button class="btn btn-primary">
     Submit
 </button>
