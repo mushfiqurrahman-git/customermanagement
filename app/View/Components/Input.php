@@ -17,7 +17,7 @@ class Input extends Component
     public function __construct($type,$name,$label)
     {
         $this->type=$type;
-        $this->name=$tnameype;
+        $this->name=$name;
         $this->label=$label;
     }
 
