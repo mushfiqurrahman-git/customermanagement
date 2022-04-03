@@ -18,11 +18,5 @@ use App\Models\Customer;
 
 Route::get('/register',[RegistrationController::class,'index']);
 Route::post('/register',[RegistrationController::class,'register']);
-
-Route::get('/customer',function(){
-    $customers = Customer::all();
-    echo "<pre>";
-    print_r($customers->toArray());
-
-});
-
+Route::get('/customer',[CustomerController::class,'index']);
+Route::post('/customer',[CustomerController::class,'store']);
