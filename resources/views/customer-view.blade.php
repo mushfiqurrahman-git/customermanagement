@@ -28,11 +28,27 @@
                 <tr>
                     <td>{{$customer->name}}</td>
                     <td>{{$customer->email}}</td>
-                    <td>{{$customer->gender}}</td>
+                    <td>
+                        @if($customer->gender == "M")
+                        Male
+                        @elseif($customer->gender == "F")
+                        Female
+                        @else
+                        Other
+                        @endif
+                    </td>
                     <td>{{$customer->dob}}</td>
+                    
                     <td>{{$customer->state}}</td>
                     <td>{{$customer->country}}</td>
-                    <td>{{$customer->status}}</td>
+                    
+                    <td>
+                        @if($customer->status == "1")
+                        Active
+                        @else
+                        Inactive
+                        @endif
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
