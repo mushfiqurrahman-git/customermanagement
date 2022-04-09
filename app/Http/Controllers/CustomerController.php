@@ -31,6 +31,8 @@ class CustomerController extends Controller
 
     public function view()
     {
-        
+        $customers = Customer::all();
+        $data = compact('customers');
+        return view('customer-view')->with($data);
     }
 }
