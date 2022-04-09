@@ -26,11 +26,11 @@ class CustomerController extends Controller
         $customer->password =md5($request['email']);
         $customer->save();
 
-        // return redirect('/customer/view');
+        return redirect('/customer/view');
     }
 
-    // public function view()
-    // {
+    public function view()
+    {
         
-    // }
+    }
 }
