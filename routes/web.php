@@ -23,6 +23,6 @@ Route::get('/',function() {
 
 Route::get('/register',[RegistrationController::class,'index']);
 Route::post('/register',[RegistrationController::class,'register']);
-Route::get('/customer/create',[CustomerController::class,'index']);
+Route::get('/customer/create',[CustomerController::class,'create'])->name('customer.create');
 Route::get('/customer',[CustomerController::class,'view']);
 Route::post('/customer',[CustomerController::class,'store']);

@@ -8,7 +8,7 @@ use App\Models\Customer;
 
 class CustomerController extends Controller
 {
-    public function index()
+    public function create()
     {
         return view('customer');
     }
@@ -26,7 +26,7 @@ class CustomerController extends Controller
         $customer->password =md5($request['email']);
         $customer->save();
 
-        return redirect('/customer/view');
+        return redirect('/customer');
     }
 
     public function view()

@@ -33,6 +33,9 @@
   </div>
 </nav>
     <div class="container">
+        <a href="{{route('customer.create')}}">
+        <button class="btn btn-primary d-inline-block m-2 float-right"> Add</button>
+        </a>
         <table class="table">
             <thread>
                 <tr>
