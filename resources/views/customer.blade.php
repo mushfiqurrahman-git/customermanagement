@@ -100,7 +100,7 @@
 </div>
 <div class="form-group col-md-6 required">
                     <label for="">State : </label>
-                    <input type="text" name="state" id="" class="form-control"/>
+                    <input type="text" name="state" id="" class="form-control" value="{{$customer->state}}"/>
                     <span class="text-danger">
                         @error('state')
                         {{message}}
@@ -110,7 +110,7 @@
 </div>
 <div class="form-group col-md-6 required">
                     <label for="">Address : </label>
-                    <input type="text" name="address" id="" class="form-control"/>
+                    <input type="text" name="address" id="" class="form-control" value="{{$customer->address}}"/>
                     <span class="text-danger">
                         @error('address')
                         {{message}}
@@ -120,7 +120,7 @@
 </div>
 <div class="form-group col-md-6 required">
                     <label for="">DOB : </label>
-                    <input type="date" name="dob" id="" class="form-control"/>
+                    <input type="date" name="dob" id="" class="form-control" value="{{$customer->dob}}"/>
                     <span class="text-danger">
                         @error('dob')
                         {{message}}
@@ -130,15 +130,19 @@
 </div>
 <div>Gender :</div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="M">
+  <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="M"
+  {{$customer->gender == "M" ? "checked" : ""}}
+  />
   <label class="form-check-label" for="inlineRadio1">Male</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="F">
+  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="F"
+  {{$customer->gender == "F" ? "checked" : "" }}/>
   <label class="form-check-label" for="inlineRadio2">Female</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="O">
+  <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="O"
+  {{$customer->gender == "O" ? "checked" : "" }}/>
   <label class="form-check-label" for="inlineRadio2">Other</label>
 </div>
 
