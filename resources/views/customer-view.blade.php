@@ -80,7 +80,7 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{url('/customer/delete/')}}/{{$customer->customer_id}}">
+                        <a href="{{route('customer.delete',['id'=>$customer->customer_id])}}">
                         <button class="btn btn-danger">Delete</button>
                         </a>
                 </tr>

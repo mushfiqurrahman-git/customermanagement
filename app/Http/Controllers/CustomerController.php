@@ -37,8 +37,12 @@ class CustomerController extends Controller
     }
     public function delete($id)
     {
-        Customer::find($id)->delete();
-        return redirect()->back();
+        $customer = Customer::find($id);
+        if (!is_null($customer)) {
+            $customer->delete();
+        }
+        
+        return redirect('customer');
 
     }
 }
