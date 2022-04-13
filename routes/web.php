@@ -17,6 +17,10 @@ use App\Models\Customer;
 |
 */
 
+Route::get('/',function(){
+    return view('index');
+});
+
 Route::get('/register',[RegistrationController::class,'index']);
 Route::post('/register',[RegistrationController::class,'register']);
 Route::get('/customer',[CustomerController::class,'index']);
