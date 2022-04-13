@@ -17,7 +17,7 @@ use App\Models\Customer;
 |
 */
 
-Route::get('/',function(){
+Route::get('/',function() {
     return view('index');
 });
 
