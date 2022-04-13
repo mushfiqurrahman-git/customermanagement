@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,11 +70,19 @@
                     
                     <td>
                         @if($customer->status == "1")
-                        Active
+                        <a href="">
+                            <span class="badge rounded-pill bg-success">Active</span>
+                        </a>
                         @else
-                        Inactive
+                        <a href="">
+                            <span class="badge rounded-pill bg-danger">Inactive</span>
+                        </a>
                         @endif
                     </td>
+                    <td>
+                        <a href="{{url('/customer/delete/')}}/{{$customer->customer_id}}">
+                        <button class="btn btn-danger">Delete</button>
+                        </a>
                 </tr>
                 @endforeach
             </tbody>
