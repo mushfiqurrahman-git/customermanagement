@@ -44,16 +44,16 @@
     </div>
   </div>
 </nav>
-      <form action="{{url('/')}}/customer" method="post">
+      <form action="{{$url}}" method="post">
           @csrf
         <div class="container mt-4 card p-3 bg-white">
             <h3 class="text-center text-primary">
-                Customer Registration
+                {{$title}}
             </h3>
             <div class="row">
                 <div class="form-group col-md-6 required">
                     <label for="">Name : </label>
-                    <input type="text" name="name" id="" class="form-control"/>
+                    <input type="text" name="name" id="" class="form-control" value="{{$customer->name}}"/>
                     <span class="text-danger">
                         @error('name')
                         {{message}}
@@ -62,7 +62,7 @@
 </div>
 <div class="form-group col-md-6 required">
                     <label for="">Email : </label>
-                    <input type="text" name="email" id="" class="form-control"/>
+                    <input type="text" name="email" id="" class="form-control" value = "{{$customer->email}}"/>
                     <span class="text-danger">
                         @error('email')
                         {{message}}
@@ -90,7 +90,7 @@
 </div>
 <div class="form-group col-md-6 required">
                     <label for="">Country : </label>
-                    <input type="text" name="country" id="" class="form-control"/>
+                    <input type="text" name="country" id="" class="form-control" value="{{$customer->country}}"/>
                     <span class="text-danger">
                         @error('country')
                         {{message}}

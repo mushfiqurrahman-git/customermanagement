@@ -10,7 +10,10 @@ class CustomerController extends Controller
 {
     public function create()
     {
-        return view('customer');
+        $url = url('/customer');
+        $title = "Customer Registration";
+        $data = compact('url','title');
+        return view('customer')->with($data);
     }
 
     public function store(Request $request)
@@ -44,5 +47,17 @@ class CustomerController extends Controller
         
         return redirect('customer');
 
+    }
+    public function edit($id)
+    {
+        $customer = Customer::find($id);
+        if(is_null($customer)){
+            return redirect('customer');
+        } else {
+            $title = "Update Customer";
+            $url = url('/customer/update') . "/" . $id; 
+            $data = compact('customer', 'url','title');
+            return view('customer')->with($data);
+        }
     }
 }
